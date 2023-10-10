@@ -1,3 +1,5 @@
+"""
+
 #Jugando con FOR
 
 #Lista, bucle *while y foreach*, random, funciones.
@@ -32,6 +34,29 @@ for numero in range(10,0,-1):
     print(numero, end=" ")
 
 
+#Un STRING por dentro es una lista en realidad
+#monstruo= "Bruja" == monstruo=['B','r','u','j','a']
+
+"""
+listaDeMonstruos= ["Bruja","Vampiro","Fantasma","Zombie"]
+
+for monstruo in listaDeMonstruos:
+    for letra in monstruo:
+        print(letra, end=" ")
 
 
+
+#for letra in monstruo:
+ #   print(letra, end=" - ")
+
+
+
+
+segundos=0
+minutos=0
+horas=0
+
+for segundos
+
+#HACER ESTOOOOO
 
