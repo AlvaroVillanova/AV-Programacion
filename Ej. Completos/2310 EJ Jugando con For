@@ -1,0 +1,16 @@
+#Jugando con FOR
+
+#Lista, bucle *while y foreach*, random, funciones.
+
+#Cuerpo
+
+#Los FOR en python son lo que en otros lenguajes se llaman FOREACH.
+#FOREACH: Para cada elemento de una lista hago lo que ponga dentro del FOR
+
+
+#Creamos una lista de monstruos.
+listaDeMonstruos=["Bruja","Vampiro","Fantasma","Hombre Lobo","Zombie"]
+
+# for *cadaElemento* in *unaLista*: *Hacemos algo*
+for monstruo in listaDeMonstruos:
+    print(f"{monstruo}s! Que miedo! )
