@@ -13,4 +13,25 @@ listaDeMonstruos=["Bruja","Vampiro","Fantasma","Hombre Lobo","Zombie"]
 
 # for *cadaElemento* in *unaLista*: *Hacemos algo*
 for monstruo in listaDeMonstruos:
-    print(f"{monstruo}s! Que miedo! )
+    print(f"{monstruo}s! Que miedo!", end=" " ) #ESTUDIAR ESTE END
+
+
+for numero in range(1,10):
+    print(numero)
+
+#Imprimo numeros impares:
+for numero in range(1,10+1,2):
+    print(numero, end=" ")
+
+#Imprimo numeros pares:
+for numero in range(0,10+1,2):
+    print(numero, end=" ")
+
+#Imprimo numeros de 10 al 1:
+for numero in range(10,0,-1):
+    print(numero, end=" ")
+
+
+
+
+
