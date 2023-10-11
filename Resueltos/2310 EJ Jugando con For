@@ -37,7 +37,7 @@ for numero in range(10,0,-1):
 #Un STRING por dentro es una lista en realidad
 #monstruo= "Bruja" == monstruo=['B','r','u','j','a']
 
-"""
+
 listaDeMonstruos= ["Bruja","Vampiro","Fantasma","Zombie"]
 
 for monstruo in listaDeMonstruos:
@@ -49,14 +49,27 @@ for monstruo in listaDeMonstruos:
 #for letra in monstruo:
  #   print(letra, end=" - ")
 
-
+"""
 
 
 segundos=0
 minutos=0
 horas=0
 
-for segundos
+    
+
+while horas<24:
+    segundos+=1
+    if segundos>59:
+        segundos=0
+        minutos+=1
+    if minutos>59:
+        minutos=0
+        horas+=1
+    if horas>23:
+        horas=0
+    print(str(horas)+":"+str(minutos)+":"+str(segundos))
+
 
 #HACER ESTOOOOO
 
