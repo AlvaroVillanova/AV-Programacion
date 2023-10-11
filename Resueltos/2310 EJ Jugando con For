@@ -51,6 +51,8 @@ for monstruo in listaDeMonstruos:
 
 """
 
+import time
+
 
 segundos=0
 minutos=0
@@ -59,6 +61,7 @@ horas=0
     
 
 while horas<24:
+    time.sleep(1)
     segundos+=1
     if segundos>59:
         segundos=0
