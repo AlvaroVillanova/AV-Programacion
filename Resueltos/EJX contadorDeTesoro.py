@@ -18,17 +18,38 @@ se combiertan en una moneda de Sickle y el proceso de ir
 consiguiendo Sickles hasta llegar al Galeón.
 """ 
 
-# Funciones 
 
-def conversionSickle(num1)
-    
 
-# Código
+#EJERCICIO 1
 
-knuts=4765
+knutsComienzo=4765
+
+sickle=knutsComienzo//29
+knut=knutsComienzo%29
+
+galeon=sickle//17
+sickle=sickle%17
+
+print(f"Tenemos {knutsComienzo} knut. Cuanto será al cambio?")
+print(f"Al cambio son {galeon} galeones, {sickle} sickle y {knut} knut.")
+
+
+
+#EJERCICIO 2
+
+knutsComienzo=4765   
+
+knut=knutsComienzo
 sickle=0
 galeon=0
 
-while knuts>29:
-    sickle=knuts%29
-    
+print(f"Tenemos {knut} knut. Cuanto será al cambio?")
+
+while knut>28:
+    knut-=29
+    sickle+=1
+    if sickle>16:
+        sickle-=17
+        galeon+=1
+
+print(f"Al cambio son {galeon} galeones, {sickle} sickle y {knut} knut.")
