@@ -43,8 +43,6 @@ knut=knutsComienzo
 sickle=0
 galeon=0
 
-print(f"Tenemos {knut} knut. Cuanto será al cambio?")
-
 while knut>28:
     knut-=29
     sickle+=1
@@ -52,4 +50,5 @@ while knut>28:
         sickle-=17
         galeon+=1
 
+print(f"Tenemos {knutsComienzo} knut. Cuanto será al cambio?")
 print(f"Al cambio son {galeon} galeones, {sickle} sickle y {knut} knut.")
