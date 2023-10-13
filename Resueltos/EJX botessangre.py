@@ -21,4 +21,38 @@ Empezando a rellenar por los botes de 5 litros debes calcular:
 
 """
 
-bote7Comprado=
+#Solicitamos botes almacenados y garrafas compradas
+
+botes3L=int(input("Cuantos botes vacios de 3L tienes en tu despensa? "))
+botes5L=int(input("Y cuantos botes de 5L? "))
+garrafasCompradas=int(input("Cuantas garrafas de 7 litros quieres comprar? "))
+
+
+#Convertimos a litros totales capacidad/comprados. Boolean de pasarse
+
+capacidadLitros = (botes3L*3)+(botes5L*5)
+litrosComprados = garrafasCompradas*7
+tePasasteGarrafas = litrosComprados > capacidadLitros
+print(f"Te pasaste comprando garrafas?: {tePasasteGarrafas}")
+    
+
+#
+
+if tePasasteGarrafas:
+    print(f"Te has pasado comprando sangre: has llenado todos tus botes y aun te sobran {litrosComprados-capacidadLitros} litros en tus garrafas.  ")
+else:
+
+    botes5Llenos=capacidadLitros//(botes5L*5)
+    capacidadLitros=capacidadLitros%(botes5L*5)
+    print(f"Has llenado {botes5Llenos} de los botes de 5 litros que tenias. ")
+
+    botes3Llenos=capacidadLitros//(botes3L*3)
+    capacidadLitros=capacidadLitros%(botes3L*3)
+    print(f"Has llenado {botes3Llenos} de los botes de 3 litros que tenias. ")
+
+if capacidadLitros==0:
+    print("Wuau! Has comprado la cantidad exacta de sangre para todos tus botes! ")
+else:
+    print(f"Vaya, parece que aun podrias haber almacenado {capacidadLitros} litros mas en un bote")
+
+5
