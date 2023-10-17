@@ -22,8 +22,7 @@ consiguiendo Sickles hasta llegar al Galeón.
 
 #EJERCICIO 1
 
-knutsComienzo=523*
-
+knutsComienzo=523
 sickle=knutsComienzo//29
 knut=knutsComienzo%29
 
