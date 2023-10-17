@@ -19,7 +19,6 @@ consiguiendo Sickles hasta llegar al Galeón.
 """ 
 
 
-
 #EJERCICIO 1
 
 knutsComienzo=523
