@@ -22,7 +22,7 @@ consiguiendo Sickles hasta llegar al Galeón.
 
 #EJERCICIO 1
 
-knutsComienzo=4765
+knutsComienzo=523*
 
 sickle=knutsComienzo//29
 knut=knutsComienzo%29
@@ -37,7 +37,8 @@ print(f"Al cambio son {galeon} galeones, {sickle} sickle y {knut} knut.")
 
 #EJERCICIO 2
 
-knutsComienzo=4765   
+#knutsComienzo=4765   
+#knutsComienzo=int(input("Cuantos knuts tenemos? "))
 
 knut=knutsComienzo
 sickle=0
@@ -52,3 +53,6 @@ while knut>28:
 
 print(f"Tenemos {knutsComienzo} knut. Cuanto será al cambio?")
 print(f"Al cambio son {galeon} galeones, {sickle} sickle y {knut} knut.")
+
+
+
