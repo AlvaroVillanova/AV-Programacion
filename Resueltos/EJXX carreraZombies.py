@@ -1,4 +1,4 @@
-u# Carrera de Zombies
+"""# Carrera de Zombies
 Recopila la información de tres Zombies: Su color, su longitud de salto y su frecuencia de salto.
 
 ¿Qué zombie ganaría una carrera de 50 metros? ¿Y de 100 metros?
@@ -31,4 +31,15 @@ La cuarta ronda la gana el Zombie Verde.
 La quinta ronda la gana el Zombie Rojo.
 
 Ha ganado el equipo Rojo.
-```
+"""
+
+def longitudSalto:
+
+
+def freqSalto:
+
+
+def calculoCarrera:
+
+
+def colorZombie:
