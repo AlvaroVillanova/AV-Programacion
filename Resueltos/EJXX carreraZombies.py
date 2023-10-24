@@ -35,22 +35,26 @@ Ha ganado el equipo Rojo.
 import random 
 
 def pedirLongitudSalto():
-    return random.randrange(3,7+1)
+    return int(random.randrange(3,7+1))
 
 
 def pedirFreqSalto():
-    return random.randrange(5,15+1)
+    return int(random.randrange(5,15+1))
 
 
-def pedirColorZombie():
-    colorZombies=[random.choice(0,3)]
-    return colorZombies
+def pedirColorZombie(contadorZombie):
+    eleccion=colores[contadorZombie]
+    return eleccion
 
 def calculoCarrera(metrosCarrera):
     longSalto=pedirLongitudSalto()
     freqSalto=pedirFreqSalto()
-    resultadoZombie=metrosCarrera/(longSalto/freqSalto)
+    resultadoZombie=int(metrosCarrera/(longSalto/freqSalto))
     return resultadoZombie
+
+
+
+
 
 #Define los colores de los tres equipos
 
@@ -61,45 +65,72 @@ colorEquipo3="Verde"
 #Listas 
 
 colores=[colorEquipo1,colorEquipo2,colorEquipo3]
+
 colorZombie=[]
+freqZombie=[]
+longZombie=[]
 resultadoZombie=[]
+recuentoVictorias=[]
 
 
-
-
-
-metrosCarrera=50    #int(input("De cuantos metros es la carrera?"))
+metrosCarrera=100    #int(input("De cuantos metros es la carrera?"))
 zombiesParticipantes=3       #int(input("Cuantos zombies van a participar? "))
 numRondas=5     #int(input("Cuantas rondas van a jugar? "))
+zombiesCarrera=zombiesParticipantes
 
-contador=0
-
-for ronda in numRondas:
-    for zombie in zombiesParticipantes:
-        resultadoCarrera=calculoCarrera(metrosCarrera)
-        print(f"Corredor num. {contador+1}, Zombie {colorZombies[contador]}. Completa el circuito en {resultadoCarrera} segs! ")
-        contador+=1
-
-
-
-#Definimos ganador
-
+contadorZombie=0
+contadorRonda=0
 
 test=f"""
-metrosCarrera: {metrosCarrera}       zombiesParticipantes: {zombiesParticipantes}
-colorZombies: {pedirColorZombie()}
+Bienvenidos a la carrera de Zombies!
 
-
-
+Numero de rondas: {numRondas}
+Zombies por ronda: {zombiesParticipantes}
+Metros de la carrera: {metrosCarrera}
 """
+
+
 print(test)
+
+
+while numRondas>0:
+    print(f"RONDA NUMERO {contadorRonda+1}! ")
+    while zombiesCarrera>0:
+        
+        colorZombie.append(pedirColorZombie(contadorZombie))
+        longZombie.append(pedirLongitudSalto())
+        freqZombie.append(pedirFreqSalto())
+        resultadoZombie.append(calculoCarrera(metrosCarrera))
+        print(f"Corredor num. {contadorZombie+1}, Zombie {colorZombie[contadorZombie]}. Completa el circuito en {resultadoZombie[contadorZombie]} segs! ")
+        contadorZombie+=1
+        zombiesCarrera-=1
+    
+    contadorZombie=0
+    posGanador=0
+    tiempoGanador=resultadoZombie[posGanador]
+    zombiesCarrera=zombiesParticipantes
+
+    for numZombie in range(0,zombiesParticipantes):
+        if resultadoZombie[numZombie]<tiempoGanador:
+            tiempoGanador=resultadoZombie[numZombie]
+            posGanador=numZombie
+
+    recuentoVictorias[posGanador]+=1
+    print(f"La ronda {contadorRonda+1} la ha ganado el zombie {colores[posGanador]} ({tiempoGanador} segs.)!")
+    resultadoZombie.clear()
+    contadorRonda+=1
+    numRondas-=1
+
+for equipo in recuentoVictorias:
+    
+
+
+equipoGanador=
+print(f"La competicion la gana el equipo {equipoGanador}")
     
 
 
 
 
-anuncioCarrera="""
-En la carrera de hoy participan:
 
-"""
 
