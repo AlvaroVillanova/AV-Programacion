@@ -70,7 +70,7 @@ colorZombie=[]
 freqZombie=[]
 longZombie=[]
 resultadoZombie=[]
-recuentoVictorias=[]
+recuentoVictorias=[0,1,2]
 
 
 metrosCarrera=100    #int(input("De cuantos metros es la carrera?"))
@@ -80,7 +80,6 @@ zombiesCarrera=zombiesParticipantes
 
 contadorZombie=0
 contadorRonda=0
-
 test=f"""
 Bienvenidos a la carrera de Zombies!
 
@@ -115,18 +114,20 @@ while numRondas>0:
             tiempoGanador=resultadoZombie[numZombie]
             posGanador=numZombie
 
+
+
     recuentoVictorias[posGanador]+=1
     print(f"La ronda {contadorRonda+1} la ha ganado el zombie {colores[posGanador]} ({tiempoGanador} segs.)!")
     resultadoZombie.clear()
     contadorRonda+=1
     numRondas-=1
 
-for equipo in recuentoVictorias:
-    
 
 
-equipoGanador=
-print(f"La competicion la gana el equipo {equipoGanador}")
+equipoGanador=max(recuentoVictorias)
+victoriasGanador=recuentoVictorias[equipoGanador]
+
+print(f"La competicion la gana el equipo {colorZombie[equipoGanador]} con {victoriasGanador} victorias! ")
     
 
 
