@@ -54,8 +54,6 @@ def calculoCarrera(metrosCarrera):
 
 
 
-
-
 #Define los colores de los tres equipos
 
 colorEquipo1="Rojo"
@@ -80,7 +78,8 @@ zombiesCarrera=zombiesParticipantes
 
 contadorZombie=0
 contadorRonda=0
-test=f"""
+
+anuncioCarrera=f"""
 Bienvenidos a la carrera de Zombies!
 
 Numero de rondas: {numRondas}
@@ -89,7 +88,7 @@ Metros de la carrera: {metrosCarrera}
 """
 
 
-print(test)
+print(anuncioCarrera)
 
 
 while numRondas>0:
@@ -123,11 +122,11 @@ while numRondas>0:
     numRondas-=1
 
 
-
-equipoGanador=max(recuentoVictorias)
+equipoGanador=recuentoVictorias.index(max(recuentoVictorias))
 victoriasGanador=recuentoVictorias[equipoGanador]
 
-print(f"La competicion la gana el equipo {colorZombie[equipoGanador]} con {victoriasGanador} victorias! ")
+
+print(f"\nLia competicion la gana el equipo {colorZombie[equipoGanador]} con {victoriasGanador} victorias! ")
     
 
 
