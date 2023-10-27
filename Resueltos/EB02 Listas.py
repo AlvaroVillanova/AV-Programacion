@@ -85,7 +85,7 @@ for palabra in listaPalabras:
 listaPalabras.clear()
     
 
-"""
+
 
 # --------- EJ Mostrar --------
 # 7.- Muestra todos los elementos de una lista separados por espacios.
@@ -94,10 +94,51 @@ listaPalabras.clear()
 # --------- EJ Buscar ---------
 # 9.- Solicita por consola un número.
 # Devuelve el elemento que hay en la posición indicada por número.
+
+listaPalabras=["perro","gato","huron"]
+nPalabra=int(input("Numero de objeto en la lista a mostrar? "))
+print(listaPalabras[nPalabra+1])
+
+
+
 # 10.- Solicita por consola un elemento.
 # Lo busca en la lista: Devuelve si está en la lista o no.
+
+listaPalabras=["perro","gato","huron"]
+palabraABuscar=input("Que palabra quieres buscar en la lista? ")
+coincidencia=0
+
+for palabra in listaPalabras:
+    if palabra == palabraABuscar:
+        coincidencia=1
+
+if coincidencia==1:
+    print("Tu palabra SI esta en la lista. ")
+else:
+    print("Tu palabra NO esta en la lista. ")
+
+"""
+
 # 11.- Solicita por consola un elemento.
 #Lo busca en la lista: Devuelve la posición que tiene dentro de la lista.
+
+listaPalabras=["perro","gato","huron"]
+palabraABuscar=input("Que palabra quieres buscar en la lista? ")
+coincidencia=0
+contadorPalabra=0
+
+for palabra in listaPalabras:
+    if palabra == palabraABuscar:
+        coincidencia=1
+        palabraGanadora=contadorPalabra
+    contadorPalabra+=1   
+    
+
+if coincidencia==1:
+    print(f"Tu palabra esta en la lista en la posicion: {palabraGanadora} ")
+else:
+    print("Tu palabra NO esta en la lista. ")
+
 # --------- EJ Modificar --------
 # 12.- Solicita por consola un número y un elemento.
 # Cambia el elemento que hay en la posición indicada por número por el nuevo elemento.
