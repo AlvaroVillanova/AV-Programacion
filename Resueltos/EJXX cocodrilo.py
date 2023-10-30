@@ -1,41 +1,40 @@
-"""
+# FUNCIONES Y DEMAS
 
-Estamos haciendo un recuento de los cocodrilos que viven en el rio Nilo.
--Contamos el numero de dientes que tiene. (lista dientes)
--La longitud del cocodrilo. (lista longitud)
--El peso del cocodrilo (lista peso)
+import random
 
-Solicitamos por pantalla las caracteristicas de cada cocodrilo:
-
-El resultado es un escrito en el que ponga para cada cocodrilo:
-
---------------------------------
-Introduce datos: 250
-5
-75
-Introduce datos: ...
-...
-...
-
----------------------------------
-
-
-El cocodrilo 1 pesa 250Kg, mide 5m y tiene 75 dientes.
-
-"""
-def rellenarDatosCocodrilos(numCocodrilos):
-    resultado=""
-    for numCocodrilo in range(num):
-        peso= int(input(""))
-        longitud= int(input(""))
-        numDientes= int(input(""))
+def pedirDato(numCocodrilos):
+    for setDatos in range(0,numCocodrilos):
+        listaNombres.append(crearNombre(numCocodrilos))
+        print(f"Dime las estadísticas {listaTiposDatos} para {listaNombres[setDatos]}, el cocodrilo número {setDatos+1}: ")
+        listaDientes.append(int(input("")))
+        listaLongitud.append(int(input("")))
+        listaPeso.append(int(input("")))                            
+def crearNombre(numCocodrilos):
+    for cocodriloSinNombrar in range(0,numCocodrilos):
+        nombreEscogido=random.choice(listaNombresDisponibles)
+    return nombreEscogido     
+def imprimeEstadisticas(numCocodrilos):
+   for cocodrilo in range (0,numCocodrilos):
+        grafico=f"""
+COCODRILO N{cocodrilo+1}. 
+Nombre: {listaNombres[cocodrilo]}
+Dientes: {listaDientes[cocodrilo]}
+Longitud: {listaLongitud[cocodrilo]}
+Peso: {listaPeso[cocodrilo]}
+        """
+        print(grafico)
         
+# CODIGO
 
-recuentoDientes=[]
-recuentoPeso=[]
-recuentoLongitud=[]
+listaNombresDisponibles=["Arturo","Rodolfo","Kuma","Hook","Molares","Dandy","Mason","Plumbus","Pablo","Bandido","Escama","KrOkI","Gustave","CrocsInCrocs","Casius","Benito","Rafael"]
+listaTiposDatos=["dientes","longitud","peso"]
 
-numCocodrilos=(int(input("Cuantos cocodrilos vamos a analizar? ")))
-print(rellenarDatosCocodrilos(numCocodrilos))
-for cocodrilo in numCocodrilos:
+listaNombres=[]
+listaDientes=[]
+listaLongitud=[]
+listaPeso=[]
 
+numCocodrilos=3
+
+pedirDato(numCocodrilos)
+imprimeEstadisticas(numCocodrilos)

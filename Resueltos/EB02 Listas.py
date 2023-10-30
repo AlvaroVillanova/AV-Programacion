@@ -24,8 +24,11 @@ def solicitarNumeros(numNumeros):
 
 # LISTAS:
 
+listaDebug=["bug","glitch","crash","poof"]
+
 listaNumeros=[]
 listaNumeros2=[]
+listaElementos=[]
 listaPalabras=[]
 
 """
@@ -73,8 +76,10 @@ print(listaNumeros2)
 
 
 # --------- EJ Borrar --------
+"""
 # 6.- Elimina todos los elementos de una lista mostrando por pantalla:
 # Se ha eliminado el elemento *numero del elemento* de la lista: *elemento*
+"""
 
 listaPalabras=["Sombrero","Camiseta","Pantalon","Zapatos","Guantes"]
 
@@ -89,8 +94,26 @@ listaPalabras.clear()
 
 # --------- EJ Mostrar --------
 # 7.- Muestra todos los elementos de una lista separados por espacios.
+
+for bugs in listaDebug:
+    print("")
+    for letras in bugs:
+        print(letras, end=" ")
+
+
+
+
+"""
 # 8.- Muestra todos los elementos de una lista mostrando por pantalla:
 # El elemento número *numero del elemento* de la lista *nombre de la lista* es: *elemento*.
+"""
+
+
+contadorDebug=0
+for elementoLista in listaDebug:
+    print(f"El elemento número {contadorDebug} de la lista {nombre de la lista} es: {elemento}.")
+
+
 # --------- EJ Buscar ---------
 # 9.- Solicita por consola un número.
 # Devuelve el elemento que hay en la posición indicada por número.
@@ -118,7 +141,7 @@ else:
     print("Tu palabra NO esta en la lista. ")
 
 """
-
+"""
 # 11.- Solicita por consola un elemento.
 #Lo busca en la lista: Devuelve la posición que tiene dentro de la lista.
 
@@ -139,9 +162,18 @@ if coincidencia==1:
 else:
     print("Tu palabra NO esta en la lista. ")
 
+"""
+
 # --------- EJ Modificar --------
+
 # 12.- Solicita por consola un número y un elemento.
 # Cambia el elemento que hay en la posición indicada por número por el nuevo elemento.
+
+print("Inserta el nombre de un elemento y un numero: ")
+listaElementos.append(solicitarPalabras(1))
+listaElementos.append(solicitarNumeros(1))
+
+
 # 13.- Solicita por consola un numero.
 # Lo busca en la lista de números: Todos los que sean mayores que ese número se cambian a ese número.
 # 14.- Solicita por consola dos numeros.
