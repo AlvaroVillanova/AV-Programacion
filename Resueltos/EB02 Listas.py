@@ -76,10 +76,9 @@ print(listaNumeros2)
 
 
 # --------- EJ Borrar --------
-"""
 # 6.- Elimina todos los elementos de una lista mostrando por pantalla:
 # Se ha eliminado el elemento *numero del elemento* de la lista: *elemento*
-"""
+
 
 listaPalabras=["Sombrero","Camiseta","Pantalon","Zapatos","Guantes"]
 
@@ -102,15 +101,13 @@ for bugs in listaDebug:
 
 
 
-
-"""
 # 8.- Muestra todos los elementos de una lista mostrando por pantalla:
 # El elemento número *numero del elemento* de la lista *nombre de la lista* es: *elemento*.
-"""
 
 
 contadorDebug=0
-for elementoLista in listaDebug:
+numElementos=len(listaDebug)
+for elementoLista in range(numElementos):
     print(f"El elemento número {contadorDebug} de la lista {nombre de la lista} es: {elemento}.")
 
 
@@ -140,8 +137,8 @@ if coincidencia==1:
 else:
     print("Tu palabra NO esta en la lista. ")
 
-"""
-"""
+
+
 # 11.- Solicita por consola un elemento.
 #Lo busca en la lista: Devuelve la posición que tiene dentro de la lista.
 
@@ -162,7 +159,7 @@ if coincidencia==1:
 else:
     print("Tu palabra NO esta en la lista. ")
 
-"""
+
 
 # --------- EJ Modificar --------
 
@@ -173,9 +170,12 @@ print("Inserta el nombre de un elemento y un numero: ")
 listaElementos.append(solicitarPalabras(1))
 listaElementos.append(solicitarNumeros(1))
 
-
+"""
 # 13.- Solicita por consola un numero.
 # Lo busca en la lista de números: Todos los que sean mayores que ese número se cambian a ese número.
+
+
+
 # 14.- Solicita por consola dos numeros.
 # Lo busca en la lista de números: Todos los que sean mayores que el mayor de los números se cambian por él. Todos los que sean menores que el menor de los números se cambian por él.
 # 15.- Solicita por consola dos numeros.
