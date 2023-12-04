@@ -88,7 +88,7 @@ print(sumarPosicionesImpares(matriz))
 matrizAux=[[1,2,3],[4,5,6],[7,8,9]]
 
 
-
+# Escribir en la primera columna de una lista la primera palabra de una lista
 
 # Rellenar una matriz con cada columna su numero de columna
 # Sumar los elementos que se encuentran en la diagonal principal:
@@ -105,3 +105,38 @@ def sumarElementosPares(matriz):
 
 print("X.")
 print(sumarElementosPares(matriz))
+
+
+
+
+# rellenar matriz con los elementos de una lista dada:
+
+listaLetras=["a","b","c","d","e","f","g","h","i","j","k","l","m",]
+contLista=0
+
+for fila in matriz:
+    for elemento in fila:
+        elemento=listaLetras[contLista]
+        contLista+=1
+
+
+def crearMatriz(nFil,nCol):
+    matrizFloat=[]
+
+    for fil in nFil
+        matrizFloat.append("")
+
+
+# Comprobar si una matriz esta llena todo el rato del mismo elemento:
+
+matrizAux2=[["x","x","x"],["x","x","x"],["x","x","x"]]
+
+def comprobarMatrizMismoElemento():
+    for fila in matriz:
+        for elemento in fila:
+            if
+
+
+# Sumar todos los elementos de dos matrices.
+
+# Dada una matriz y un elemento, revisar si ese elemento esta en la matriz.
