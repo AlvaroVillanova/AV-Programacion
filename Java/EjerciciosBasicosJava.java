@@ -25,7 +25,7 @@ public class EjerciciosBasicosJava{
 
         System.out.println("2. Dime una palabra: ");
         palabra = sc.nextLine();
-        System.out.println(palabra.repeat(" ",repeticiones));
+        System.out.println(palabra.repeat(repeticiones));
 
         //Ej 3 Solicita por teclado una palabra y repítela 5 veces separándola por espacios.
         //Ej 4 Solicita una palabra y un número. Repite la palabra tantas veces como indique el número.
@@ -33,7 +33,24 @@ public class EjerciciosBasicosJava{
 
         // ---------- OPERADORES --------------
         //Ej 6 Solicita por teclado un número y multiplícalo por 0.
+
+        int multiplicador = 0;
+
+        System.out.println("6. Solicita un numero por teclado y multiplicalo por 0.");
+        int numero = sc.nextInt();
+        int resultado = numero * multiplicador;
+        System.out.println("El resultado es: "+ resultado);
+
         //Ej 7 Solicita por teclado dos números y multiplícalos entre sí.
+
+        System.out.println("7. Solicita por teclado dos numero y multiplicalos entre si. ");
+        int entradas = sc.nextInt();
+        numero = entradas.nextInt();
+        numero2 = entradas.nextInt();
+        resultado = numero * numero2;
+        System.out.println(resultado);
+
+
         //Ej 8 Solicita por teclado dos números y escribe true si el primero es mayor.
         //Ej 9 Solicita por teclado un número y escribe true si es par.
         //EJ 9.1 Solicita por teclado un número y escribe true si es multiplo de 5.
